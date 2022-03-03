@@ -1,0 +1,5 @@
+{
+"java.externalDependencies": [],
+"appService.defaultWebAppToDeploy": "/subscriptions/f610af35-2054-477f-bc86-870bf0906f9a/resourceGroups/gamesense-pub-rg/providers/Microsoft.Web/sites/gamesense-pub",
+"appService.deploySubpath": "."
+}

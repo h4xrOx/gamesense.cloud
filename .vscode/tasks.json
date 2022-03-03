@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "taskName": "build",
+      "type": "shell",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "isBackground": false,
+      "group": "build",
+      "command": "mvn",
+      "args": [
+        "install"
+      ]
+    }
+  ]
+}

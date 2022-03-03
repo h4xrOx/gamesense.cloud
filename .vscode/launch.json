@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Java",
+      "type": "java",
+      "request": "launch",
+      "stopOnEntry": false,
+      "preLaunchTask": "build",
+      "jdkPath": "${env:JAVA_HOME}/bin",
+      "cwd": "${fileDirname}",
+      "startupClass": "${fileBasename}",
+      "classpath": [],
+      "sourcePath": [],
+      "options": [],
+      "args": []
+    }
+  ]
+}

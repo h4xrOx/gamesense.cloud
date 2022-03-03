@@ -1,0 +1,28 @@
+{
+    "recommendations": [
+        "ms-dotnettools.csharp",
+        "wallabyjs.wallaby-vscode",
+        "msjsdiag.cordova-tools",
+        "snyk-security.snyk-vulnerability-scanner",
+        "jankincai.vscodefileheader",
+        "ms-edgedevtools.vscode-edge-devtools",
+        "harryhopkinson.vs-code-runner",
+        "sedarity.vsc-jvm-build-menu",
+        "jessy.gamesense-lua-helper",
+        "redhat.vscode-rsp-ui",
+        "ms-vscode.cpptools",
+        "ms-azuretools.vscode-azureappservice",
+        "ms-vscode.azure-account",
+        "formulahendry.docker-explorer",
+        "ms-vscode-remote.remote-containers",
+        "vscjava.vscode-java-debug",
+        "platformio.platformio-ide",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "dongli.python-preview",
+        "kiteco.kite",
+        "alphabotsec.vscode-eclipse-keybindings",
+        "ibm.codewind-openapi-tools",
+        "ms-vscode.atom-keybindings",
+        "suming.react-proptypes-generate"
+    ]
+}
