@@ -23,6 +23,8 @@
         "alphabotsec.vscode-eclipse-keybindings",
         "ibm.codewind-openapi-tools",
         "ms-vscode.atom-keybindings",
-        "suming.react-proptypes-generate"
+        "suming.react-proptypes-generate",
+        "harryhopkinson.code-boilerplate",
+        "redhat.java"
     ]
 }

@@ -1,0 +1,11 @@
+# IDE
+.idea
+
+# Node.js
+node_modules
+
+# Nuxt
+dist
+
+# Custom
+data/whitelist.json
