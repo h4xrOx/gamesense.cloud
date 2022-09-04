@@ -39,7 +39,7 @@ https://github.com/h4xrOx/GAMESENSE-CRACKED-HACKED-DUMPED
 #### */* --you will need Ubuntu 20.04:  https://apps.microsoft.com/store/detail/ubuntu-20044-lts/9MTTCL66CPXJ
 #### */* --you will need to install NodeJS: https://ubuntu.com/tutorials/working-with-visual-studio-code-on-ubuntu-on-wsl2#5-install-nodejs-and-create-a-new-project
 #### */* --you will need to install sdkman: ``curl -s "https://get.sdkman.io" | bash``
-#### */* --you will need to then install ``sdk install maven`` ``sdk instal spring-boot`` ``sdk isntall java`` ``sdk install quarkus``
+#### */* --you will need to then install ``sdk install maven`` ``sdk instal spring-boot`` ``sudo apt-get install openjdk-11-jdk`` ``sdk list java`` ``sdk install quarkus``
 #### */* --you will need to install: Visual Studio Code https://code.visualstudio.com/
 #### */* --you will need to install the Remote Development extention: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-   extensionpack
 #### */* --you will need to install docker desktop: https://docs.docker.com/desktop/install/windows-install/
