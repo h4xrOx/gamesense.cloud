@@ -2,6 +2,7 @@
  # @`https://discord.gg/EYCBURUPcm 
 
 ## GAMESENSE.IS | GAMESENSE.PUB | SKEET.CC 
+
 ```
 // original gamesense.pub crack (fake) gamesense.pub staff leaked the lua workshop, the gamesensical staff group dox'd the documentation which lead to it being // used in other cheat sources as api.gamesense.is = gcode solutions, legendware, nixware, dota2 company login. in directory you can find the build't in cheat // sources; the " crack" is leak of DLC ( downloadable content ) skeet is legendary because of the users who made that content. The cheat is an original paste, // the base buildt in cheat is by valve, extended by the community of modders, of which the hvh community gives crown to the rage content made by skeet users. // Which content can be used in this "crack" .
 ```
@@ -19,7 +20,7 @@
 
 #  Gamesense.pub cracked Loader, cheat engine & scripting CLI
 
-####  For help or more tutorials, leaks, cheats, hacks & h4xr0x join the community or follow here:
+#### For help or more tutorials, leaks, cheats, hacks & h4xr0x join the community or follow here:
 #### */* https://gamesense.cloud
 #### */* https://h4xr0x.cc
 #### */* https://discord.gg/EYCBURUPcm
