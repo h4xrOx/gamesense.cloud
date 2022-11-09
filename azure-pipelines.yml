@@ -1,11 +1,4 @@
-# Universal Windows Platform
-- task: IISWebAppDeploymentOnMachineGroup@0
-  inputs:
-    WebSiteName: 'gamesense.cloud'
-    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
-# Build a Universal Windows Platform project using Visual Studio.
-# Add steps that test and distribute an app, save build artifacts, and more:
-# https://aka.ms/yaml
+
 
 trigger:
 - main
