@@ -1,27 +1,19 @@
-
+- task: Npm@1
+  inputs:
+    command: 'install'
+    verbose: true
+    customRegistry: 'useFeed'
+    customFeed: '57608194-7fe0-4de4-863f-2ccb84e6b54c'
 
 trigger:
 - main
-
-pool:
-  vmImage: 'windows-latest'
-
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'x86|x64|ARM'
-  buildConfiguration: 'Release'
-  appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
-
-steps:
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
+- task: Gradle@3
   inputs:
-    restoreSolution: '$(solution)'
-
-- task: VSBuild@1
-  inputs:
-    platform: 'x86'
-    solution: '$(solution)'
-    configuration: '$(buildConfiguration)'
-    msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload'
+    gradleWrapperFile: 'gradlew'
+    workingDirectory: '/demo/'
+    tasks: 'build'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    sonarQubeRunAnalysis: false
+    spotBugsAnalysis: false
