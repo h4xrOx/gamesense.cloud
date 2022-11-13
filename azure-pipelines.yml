@@ -4,16 +4,3 @@
     verbose: true
     customRegistry: 'useFeed'
     customFeed: '57608194-7fe0-4de4-863f-2ccb84e6b54c'
-
-trigger:
-- main
-- task: Gradle@3
-  inputs:
-    gradleWrapperFile: 'gradlew'
-    workingDirectory: '/demo/'
-    tasks: 'build'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    sonarQubeRunAnalysis: false
-    spotBugsAnalysis: false
