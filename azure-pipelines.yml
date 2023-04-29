@@ -1,7 +1,22 @@
 - task: Npm@1
+- task: Maven@4
+  inputs:
+    mavenPomFile: 'gamesense.cloud/demo/'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'Path'
+    mavenVersionOption: 'Path'
+    mavenSetM2Home: false
+    mavenAuthenticateFeed: true
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 - task: GitHubRelease@1
   inputs:
     gitHubConnection: 'h4xrOx'
+- task: IISWebAppDeploymentOnMachineGroup@0
+  inputs:
+    WebSiteName: 'gamesense.cloud'
+    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
     repositoryName: 'h4xrOx/gamesense.cloud'
     action: 'create'
     target: '$(Build.SourceVersion)'
