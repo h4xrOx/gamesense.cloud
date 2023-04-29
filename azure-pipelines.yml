@@ -1,3 +1,11 @@
+pool:  
+  name: local 
+
+trigger: none 
+
+steps: 
+- script: echo Hello, world! 
+  displayName: 'Run a one-line script'
 - task: Npm@1
 - task: Maven@4
   inputs:
