@@ -1,4 +1,13 @@
 - task: Npm@1
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'h4xrOx'
+    repositoryName: 'h4xrOx/gamesense.cloud'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
   inputs:
     command: 'install'
     verbose: true
