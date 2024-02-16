@@ -76,52 +76,35 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./dist
+          
+import * as Sentry from "@sentry/node";
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
-      - name: Setup Node.js environment    
-      
-  uses: actions/setup-node@v2.5.2
-  with:
-    # Set always-auth in npmrc
-    always-auth: # optional, default is false
-    # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
-    node-version: # optional
-    # File containing the version Spec of the version to use.  Examples: .nvmrc, .node-version
-    node-version-file: # optional
-    # Target architecture for Node to use. Examples: x86, x64. Will use system architecture by default.
-    architecture: # optional
-    # Set this option if you want the action to check for the latest available version that satisfies the version spec
-    check-latest: # optional
-    # Optional registry to set up for auth. Will set the registry in a project level .npmrc and .yarnrc file, and set up auth to read in from env.NODE_AUTH_TOKEN
-    registry-url: # optional
-    # Optional scope for authenticating against scoped registries
-    scope: # optional
-    # Used to pull node distributions from node-versions.  Since there's a default, this is typically not supplied by the user.
-    token: # optional, default is ${{ github.token }}
-    # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm
-    cache: # optional
-    # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
-    cache-dependency-path: # optional
-    # Deprecated. Use node-version instead. Will not be supported after October 1, 2019
-    version: # optional  
-    # setup Caches 
-    name: Cache  
-    Users: actions/cache@v1.2.1
-    with:
-    # A directory to store and save the cache
-    path: 
-    # An explicit key for restoring and saving the cache
-    key: 
-    # An ordered list of keys to use for restoring the cache if no cache hit occurred for key
-    restore-keys: # optional
-    
+import express from "express";
+
+const app = express();
+
+Sentry.init({
+  dsn: "https://b96289515589438eb8e5853d4049d52a@o4504334195425280.ingest.sentry.io/4504334219149312",
+  integrations: [],
+});
+
+// The request handler must be the first middleware on the app
+app.use(Sentry.Handlers.requestHandler());
+
+// All your controllers should live here
+app.get("/", function rootHandler(req, res) {
+  res.end("Hello world!");
+});
+
+// The error handler must be registered before any other error middleware and after all controllers
+app.use(Sentry.Handlers.errorHandler());
+
+// Optional fallthrough error handler
+app.use(function onError(err, req, res, next) {
+  // The error id is attached to `res.sentry` to be returned
+  // and optionally displayed to the user for support.
+  res.statusCode = 500;
+  res.end(res.sentry + "\n");
+});
+
+app.listen(3000);
