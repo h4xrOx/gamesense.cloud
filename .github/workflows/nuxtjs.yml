@@ -5,6 +5,7 @@
 name: Deploy Nuxt site to Pages
 
 on:
+runs-on: self-hosted
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
