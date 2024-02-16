@@ -1,4 +1,9 @@
 pool:  
+- task: Npm@1
+  inputs:
+    command: 'install'
+    customRegistry: 'useFeed'
+    customFeed: '85bc9892-febe-4ffd-aa69-21e58c5dc166'
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
